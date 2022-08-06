@@ -121,3 +121,37 @@ function calculate(){
 calculate();
 
 
+
+
+// Theme Buttons //
+
+var switcher = document.getElementById('button')
+localStorage.setItem('theme', '0')
+switcher.addEventListener('click', function(){
+    if (localStorage.getItem('theme') == '0'){
+        localStorage.setItem('theme', '1');
+        document.getElementById('body').style.background = 'hsl(0, 0%, 90%)';
+        document.getElementById('background').style.background = 'hsl(0, 5%, 81%)';
+        document.getElementById('output').style.background = 'hsl(0, 0%, 93%)';
+        document.getElementById('number').style.color = 'hsl(60, 10%, 19%)';
+        document.getElementById('=').style.backgroundColor =  'hsl(25, 98%, 40%)';
+        document.getElementById('=').style.boxShadow = '0 8px 0px 0px hsl(25, 99%, 27%)';
+        document.getElementById('del').style.backgroundColor =  'hsl(185, 42%, 37%)';
+        document.getElementById('del').style.boxShadow = '0 8px 0px 0px hsl(185, 58%, 25%)';
+        document.getElementById('reset').style.backgroundColor =  'hsl(185, 42%, 37%)';
+        document.getElementById('reset').style.boxShadow = '0 8px 0px 0px hsl(185, 58%, 25%)';
+    } else {
+        localStorage.setItem('theme', '0');
+        document.getElementById('body').style.background = 'hsl(222, 26%, 31%)';
+        document.getElementById('background').style.background = 'hsl(223, 31%, 20%)';
+        document.getElementById('output').style.background = 'hsl(224, 36%, 15%)';
+        document.getElementById('number').style.color = '#fff';
+        document.getElementById('=').style.backgroundColor =  'hsl(6, 63%, 50%)';
+        document.getElementById('=').style.boxShadow = '0 8px 0px 0px hsl(6, 70%, 34%)';
+        document.getElementById('del').style.backgroundColor =  'hsl(225, 21%, 49%)';
+        document.getElementById('del').style.boxShadow = '0 8px 0px 0px hsl(224, 28%, 35%)';
+        document.getElementById('reset').style.backgroundColor =  'hsl(225, 21%, 49%)';
+        document.getElementById('reset').style.boxShadow = '0 8px 0px 0px hsl(224, 28%, 35%)';
+
+    }
+})
