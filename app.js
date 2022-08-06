@@ -108,7 +108,13 @@ function calculate(){
     let  equal = document.getElementsByClassName('keys')[0].getElementsByClassName('key')[17];
 
     equal.addEventListener('click', function(){
-        number.textContent = parseFloat(eval(data.final)).toFixed(2)
+        if((parseFloat(eval(data.final)).toFixed(2)).toString() == 'Infinity'){
+            number.textContent = "Error"
+            data.final = ''
+        }else{
+            number.textContent = (parseFloat(eval(data.final)).toFixed(2)).toString()  
+            data.final = ''   
+        }  
     })
 }
 
