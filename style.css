@@ -74,6 +74,7 @@ body{
     justify-content: end;
     display: flex;
     line-height: 150px;
+    overflow: hidden;
 }
 
 #number{
@@ -81,8 +82,8 @@ body{
     font-size: 4em;
     color: white;
     margin-right: 40px;
-    overflow: hidden;
     color: #fff;
+    overflow-x: initial;
 }
 
 #del, #reset{
